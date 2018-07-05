@@ -1,0 +1,45 @@
+﻿@model DatatableCRUD.Models.Employee
+
+@using (Html.BeginForm("save","home", FormMethod.Post, new { id= "popupForm" }))
+{
+    if (Model != null && Model.EmployeeID > 0)
+    {
+        @Html.HiddenFor(a=>a.EmployeeID)
+    }
+
+    <div class="form-group">
+        <label>Nombre</label>
+        @Html.TextBoxFor(a=>a.Nombre,new { @class = "form-control" })
+        @Html.ValidationMessageFor(a=>a.Nombre)
+    </div>
+    <div class="form-group">
+        <label>Apellido Pateno</label>
+        @Html.TextBoxFor(a => a.Apellido_Paterno, new { @class = "form-control" })
+        @Html.ValidationMessageFor(a => a.Apellido_Paterno)
+    </div>
+    <div class="form-group">
+        <label>Apellido Materno</label>
+        @Html.TextBoxFor(a => a.Apellido_Materno, new { @class = "form-control" })
+        @Html.ValidationMessageFor(a => a.Apellido_Materno)
+    </div>
+    <div class="form-group">
+        <label>CURP</label>
+        @Html.TextBoxFor(a => a.CURP, new { @class = "form-control" })
+        @Html.ValidationMessageFor(a => a.CURP)
+    </div>
+   <hr/>
+
+    <div class="d-flex justify-content-around">
+        <input type="button" class="btn btn-secondary" value="Cancelar" id="button_cancel" />
+        <input type="submit" value="Guardar" class="btn btn-success" />
+    </div>
+}
+
+<script>
+    $("#button_cancel").click(function () {
+
+        $dialog.dialog('close');
+
+    });
+</script>
+    
