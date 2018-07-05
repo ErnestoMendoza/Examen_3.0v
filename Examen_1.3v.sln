@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatatableCRUD", "DatatableCRUD\DatatableCRUD.csproj", "{749FB1BA-3A88-4623-863A-6B2755109557}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Examen_1.3v", "DatatableCRUD\Examen_1.3v.csproj", "{749FB1BA-3A88-4623-863A-6B2755109557}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +18,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2807CAED-96D2-43DD-89FA-10C6CF937CED}
 	EndGlobalSection
 EndGlobal
