@@ -4,7 +4,7 @@
 <hr />
 @using (Html.BeginForm("delete", "home", FormMethod.Post, new { id = "popupForm" }))
 {
-    @Html.HiddenFor(a => a.EmployeeID)
+    @Html.HiddenFor(a => a.PersonaID)
     <div class="form-group">
         <label><strong>Nombre</strong></label>
         <p>@Model.Nombre</p>

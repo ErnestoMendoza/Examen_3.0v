@@ -14,7 +14,7 @@ namespace DatatableCRUD.Models
     
     public partial class Employee
     {
-        public int EmployeeID { get; set; }
+        public int PersonaID { get; set; }
         public string Nombre { get; set; }
         public string Apellido_Paterno { get; set; }
         public string Apellido_Materno { get; set; }

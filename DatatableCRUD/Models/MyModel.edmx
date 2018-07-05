@@ -7,9 +7,9 @@
       <Schema Namespace="MyDatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Employees">
           <Key>
-            <PropertyRef Name="EmployeeID" />
+            <PropertyRef Name="PersonaID" />
           </Key>
-          <Property Name="EmployeeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PersonaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Nombre" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Apellido_Paterno" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Apellido_Materno" Type="nvarchar" MaxLength="200" />
@@ -26,9 +26,9 @@
       <Schema Namespace="MyDatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Employee">
           <Key>
-            <PropertyRef Name="EmployeeID" />
+            <PropertyRef Name="PersonaID" />
           </Key>
-          <Property Name="EmployeeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PersonaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Apellido_Paterno" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Apellido_Materno" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
@@ -47,7 +47,7 @@
           <EntitySetMapping Name="Employees">
             <EntityTypeMapping TypeName="MyDatabaseModel.Employee">
               <MappingFragment StoreEntitySet="Employees">
-                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="PersonaID" ColumnName="PersonaID" />
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
                 <ScalarProperty Name="Apellido_Paterno" ColumnName="Apellido_Paterno" />
                 <ScalarProperty Name="Apellido_Materno" ColumnName="Apellido_Materno" />

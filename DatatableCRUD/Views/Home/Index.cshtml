@@ -22,15 +22,15 @@
 <body>
     <div style="width:90%; margin:0 auto" class="tablecontainer">
         <a class="popup btn btn-primary" href="/home/save/0" style="margin-bottom:20px; margin-top:20px;">Crear Persona +</a>
-        <table id="myDatatable" class="table table-striped">
-            <thead>
+        <table id="myDatatable" class="table">
+            <thead class="thead-dark">
                 <tr>
                     <th>Nombre</th>
                     <th>Apellido Paterno</th>
                     <th>Apellido Materno</th>
                     <th>CURP</th>
                     <th>Editar</th>
-                    <th>Borrar</th>
+                    <th>Eliminar</th>
                 </tr>
             </thead>
         </table>
@@ -62,13 +62,13 @@
                     { "data": "CURP", "autoWidth": true },
                  
                     {
-                        "data": "EmployeeID", "width": "50px", "render": function (data) {
-                            return '<a class="popup" href="/home/save/' + data + '">Editar</a>';
+                        "data": "PersonaID", "width": "50px", "render": function (data) {
+                            return '<a class="popup btn btn-info" href="/home/save/' + data + '">Editar</a>';
                         }
                     },
                     {
-                        "data": "EmployeeID", "width": "50px", "render": function (data) {
-                            return '<a class="popup" href="/home/delete/' + data + '">Borrar</a>';
+                        "data": "PersonaID", "width": "50px", "render": function (data) {
+                            return '<a class="popup btn btn-danger" href="/home/delete/' + data + '">Eliminar</a>';
                         }
                     }
                 ]

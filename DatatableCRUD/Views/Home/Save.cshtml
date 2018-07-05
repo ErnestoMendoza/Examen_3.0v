@@ -2,9 +2,9 @@
 
 @using (Html.BeginForm("save","home", FormMethod.Post, new { id= "popupForm" }))
 {
-    if (Model != null && Model.EmployeeID > 0)
+    if (Model != null && Model.PersonaID > 0)
     {
-        @Html.HiddenFor(a=>a.EmployeeID)
+        @Html.HiddenFor(a=>a.PersonaID)
     }
 
     <div class="form-group">

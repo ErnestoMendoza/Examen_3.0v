@@ -28,7 +28,7 @@ namespace DatatableCRUD.Controllers
         {
             using (MyDatabaseEntities dc = new MyDatabaseEntities())
             {
-                var v = dc.Employees.Where(a => a.EmployeeID == id).FirstOrDefault();
+                var v = dc.Employees.Where(a => a.PersonaID == id).FirstOrDefault();
                 return View(v);
             }
         }
@@ -41,10 +41,10 @@ namespace DatatableCRUD.Controllers
             {
                 using (MyDatabaseEntities dc = new MyDatabaseEntities())
                 {
-                    if (emp.EmployeeID > 0)
+                    if (emp.PersonaID > 0)
                     {
                         //Edit 
-                        var v = dc.Employees.Where(a => a.EmployeeID == emp.EmployeeID).FirstOrDefault();
+                        var v = dc.Employees.Where(a => a.PersonaID == emp.PersonaID).FirstOrDefault();
                         if (v != null)
                         {
                             v.Nombre = emp.Nombre;
@@ -72,7 +72,7 @@ namespace DatatableCRUD.Controllers
         {
             using (MyDatabaseEntities dc = new MyDatabaseEntities())
             {
-                var v = dc.Employees.Where(a => a.EmployeeID == id).FirstOrDefault();
+                var v = dc.Employees.Where(a => a.PersonaID == id).FirstOrDefault();
                 if (v != null)
                 {
                     return View(v);
@@ -91,7 +91,7 @@ namespace DatatableCRUD.Controllers
             bool status = false;
             using (MyDatabaseEntities dc = new MyDatabaseEntities())
             {
-                var v = dc.Employees.Where(a => a.EmployeeID == id).FirstOrDefault();
+                var v = dc.Employees.Where(a => a.PersonaID == id).FirstOrDefault();
                 if (v != null)
                 {
                     dc.Employees.Remove(v);
